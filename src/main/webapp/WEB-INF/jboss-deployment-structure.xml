@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+  <deployment>
+    <!-- Exclude webservices subsystem so the implicit dependencies will not be added -->
+    <exclude-subsystems>
+      <subsystem name="webservices"/>
+    </exclude-subsystems>
+    <dependencies>
+      <module name="javax.xml.ws.api"/>
+      <module name="javax.jws.api"/>
+    </dependencies>
+  </deployment>
+</jboss-deployment-structure>

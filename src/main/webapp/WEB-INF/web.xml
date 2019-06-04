@@ -4,12 +4,15 @@
          version="2.4"
          xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
                              http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
-  <servlet>
-    <servlet-name>HelloEndpoint</servlet-name>
-    <servlet-class>com.redhat.gss.jaxrpc.HelloEndpoint</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HelloEndpoint</servlet-name>
-    <url-pattern>/*</url-pattern>
-  </servlet-mapping>
+<servlet>
+  <servlet-name>AxisServlet</servlet-name>
+  <display-name>Apache-Axis Servlet</display-name>
+  <servlet-class>
+    org.apache.axis.transport.http.AxisServlet
+  </servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>AxisServlet</servlet-name>
+  <url-pattern>/services/*</url-pattern>
+</servlet-mapping>
 </web-app>
